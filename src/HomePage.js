@@ -141,13 +141,14 @@ const HomePage = () => {
           Introducing <span className="text-yellow-400">OliverProjections</span>, a cutting-edge platform for global data analytics, empowering users with insights from leagues worldwide.
         </p>
         <div className="flex justify-center">
-          <video
-            src="/op-update7.23.25.mp4"
-            controls
-            autoPlay
-            loop
-            className="w-[90%] rounded-xl shadow-lg"
-          />
+          <iframe
+            src="https://www.youtube.com/embed/Uhk2b_zTPXI?autoplay=1&controls=0&loop=1&playlist=Uhk2b_zTPXI"
+            title="YouTube video player"
+            style={{ width: '150%', maxWidth: '1350px', height: '750px', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
         </div>
       </section>
 
