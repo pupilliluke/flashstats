@@ -1,0 +1,143 @@
+/* Testimonials.css */
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+  background-color: #1f2937; /* Gray background for the first section */
+  color: #ffffff; /* White text */
+  border-radius: 16px; /* Modern rounded shape */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  height: 600px; /* Fixed height based on largest carousel item */
+  margin-bottom: 3rem; /* Add spacing below the section */
+}
+
+.carousel-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  height: 100%; /* Ensure carousel fills the section */
+  overflow: hidden; /* Prevent height changes */
+}
+/* Add this to Testimonials.css */
+.custom-carousel .carousel-indicators {
+  position: static;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.testimonial-card {
+  padding: 2rem;
+  background-color: transparent; /* Remove card background */
+  border-radius: 12px;
+  box-shadow: none; /* Remove individual card shadow */
+  height: 100%; /* Fixed height for cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.testimonial-quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #d1d5db; /* Light gray for text */
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.testimonial-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fbbf24; /* Yellow accent */
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-title {
+  font-size: 0.95rem;
+  color: #9ca3af; /* Muted gray */
+}
+
+/* Carousel indicators - moved below card */
+.carousel-indicators {
+  position: static;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #6b7280; /* Neutral gray */
+  opacity: 0.7;
+  margin: 0 6px;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: #fbbf24; /* Yellow accent */
+  opacity: 1;
+}
+
+/* Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  transform: translateX(-50%); /* Adjust position */
+}
+
+.carousel-control-next {
+  margin-right: -20%;
+}
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 60%;
+}
+
+.player-spotlight-container {
+  background-color: #ffffff; /* White background for the second section */
+  max-width: 1200px; /* Make Player Spotlight max width */
+  margin: 0 auto; /* Center the section */
+}
+
+.global-data-container {
+  background-color: #f3f4f6; /* Light gray background for the third section */
+  display: flex;
+  justify-content: center;
+}
+
+.global-data-container .max-w-5xl {
+  margin: 0 auto; /* Center the carousel horizontally */
+}
+
+.player-spotlight-card {
+  border: none; /* Eliminate card borders */
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 1.5rem;
+    min-height: 180px;
+    width: 90%; /* Slightly wider on mobile */
+  }
+  
+  .testimonial-quote {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-indicators {
+    margin-top: 20px;
+  }
+}
