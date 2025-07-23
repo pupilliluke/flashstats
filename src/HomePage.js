@@ -45,9 +45,9 @@ const HomePage = () => {
   }, [players.length]);
 
   return (
-    <div className="font-roboto-slab bg-gray-900 text-white min-h-screen">
+    <div className="font-roboto-slab bg-gray-900 text-white min-h-screen w-full overflow-x-hidden">
       {/* Header */}
-     <header className="relative bg-cover bg-center h-[65vh]" style={{ backgroundImage: 'url("/bg2.jpg")' }}>
+     <header className="relative bg-cover bg-center h-[65vh] w-full" style={{ backgroundImage: 'url("/bg2.jpg")' }}>
           <div className="absolute top-0 left-0 w-full flex justify-between items-center p-6 text-sm z-10">
             <img src="/logo.png" alt="FlashStats Logo" className="w-16 h-16" />
             <div className="flex items-center gap-4">
@@ -71,7 +71,7 @@ const HomePage = () => {
           </div>
         </header>
 
-        <section className="bg-gray-900 py-16 px-8 md:px-20 text-center text-white">
+        <section className="bg-gray-900 py-16 px-8 md:px-20 text-center text-white w-full">
           <h2 className="section-title">Introducing <span className="text-yellow-400">BRAIN</span></h2>
           <p className="max-w-4xl mx-auto text-lg mb-8">
             <span className="text-4xl font-bold">B</span>aseball <span className="text-4xl font-bold">R</span>esearch <span className="text-4xl font-bold">A</span>nd <span className="text-4xl font-bold">I</span>nteractive <span className="text-4xl font-bold">N</span>exus
@@ -99,13 +99,13 @@ const HomePage = () => {
           </div>
         </section>
       {/* Foreign Leagues Section */}
-     <section className="bg-gray-800 text-white py-16 px-6 md:px-24 text-center">
+     <section className="bg-gray-800 text-white py-16 px-6 md:px-24 text-center w-full">
         <GlobalData />
         </section>
 
       {/* Player Spotlight Auto Carousel */}
-        <section className="bg-gray-900 py-24 px-8 md:px-20 text-white text-center">
-          <h2 className="text-6xl font-bold text-yellow-400 mb-28 tracking-wide">Data Analytics</h2>
+        <section className="bg-gray-900 py-24 px-4 md:px-20 text-white text-center w-full">
+          <h2 className="text-6xl font-bold text-yellow-400 mb-12 tracking-wide">Data Analytics</h2>
           <div className="relative flex justify-center items-center">
             <button
               onClick={() => setIndex((prev) => (prev - 1 + players.length) % players.length)}
@@ -113,12 +113,12 @@ const HomePage = () => {
             >
               &#8592;
             </button>
-            <div className="w-[60%] transition-all duration-300 ease-in-out transform">
-              <div className="flex flex-col items-center bg-gray-900 backdrop-blur-md p-6 rounded-2xl shadow-2xl">
+            <div className="w-full max-w-[90%] transition-all duration-300 ease-in-out transform">
+              <div className="flex flex-col items-center bg-gray-900 backdrop-blur-md p-4 rounded-2xl shadow-2xl">
                 <img
                   src={players[index].img}
                   alt={players[index].name}
-                  className="w-[60%] h-[550px] object-contain rounded-xl shadow-lg mb-6 scale-150 mt-8 transition-transform duration-300"
+                  className="w-full h-auto object-contain rounded-xl shadow-lg mb-4 transition-transform duration-300"
                 />
                 <p className="text-lg font-medium text-white leading-relaxed max-w-3xl mx-auto italic">
                   {players[index].description}
@@ -135,7 +135,7 @@ const HomePage = () => {
         </section>
 
       {/* Coming Soon Section */}
-      <section className="bg-gray-800 py-16 px-4 md:px-20 text-center text-white">
+      <section className="bg-gray-800 py-16 px-4 md:px-20 text-center text-white w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-6 tracking-wide">Coming Soon</h2>
         <p className="text-base md:text-lg font-medium mb-6 max-w-3xl mx-auto">
           Introducing <span className="text-yellow-400">OliverProjections</span>, a cutting-edge platform for global data analytics, empowering users with insights from leagues worldwide.
@@ -162,7 +162,7 @@ const HomePage = () => {
      
 
       {/* Footer */}
-      <footer className="bg-gray-100 text-gray-800 py-10 text-center">
+      <footer className="bg-gray-100 text-gray-800 py-10 text-center w-full">
         <div className="flex flex-col items-center gap-4">
           <img src="/logo.png" alt="FlashStats Logo" className="w-16 h-16" />
           <div className="flex gap-6 items-center text-sm">
