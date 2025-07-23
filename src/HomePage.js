@@ -135,16 +135,16 @@ const HomePage = () => {
         </section>
 
       {/* Coming Soon Section */}
-      <section className="bg-gray-800 py-16 px-8 md:px-20 text-center text-white">
-        <h2 className="text-4xl font-bold text-yellow-400 mb-10 tracking-wide">Coming Soon</h2>
-        <p className="text-lg font-medium mb-8 max-w-3xl mx-auto">
+      <section className="bg-gray-800 py-16 px-4 md:px-20 text-center text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-6 tracking-wide">Coming Soon</h2>
+        <p className="text-base md:text-lg font-medium mb-6 max-w-3xl mx-auto">
           Introducing <span className="text-yellow-400">OliverProjections</span>, a cutting-edge platform for global data analytics, empowering users with insights from leagues worldwide.
         </p>
         <div className="flex justify-center">
           <iframe
             src="https://www.youtube.com/embed/Uhk2b_zTPXI?autoplay=1&controls=0&loop=1&playlist=Uhk2b_zTPXI"
             title="YouTube video player"
-            style={{ width: '150%', maxWidth: '1350px', height: '750px', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
+            style={{ width: '100%', maxWidth: '600px', height: '350px', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
