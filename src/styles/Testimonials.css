@@ -8,8 +8,12 @@
   color: #ffffff; /* White text */
   border-radius: 16px; /* Modern rounded shape */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  height: 600px; /* Fixed height based on largest carousel item */
+  /* height: 600px; Fixed height based on largest carousel item */
   margin-bottom: 3rem; /* Add spacing below the section */
+  height: 900px; /* Fixed height */
+    display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
 }
 
 .carousel-wrapper {

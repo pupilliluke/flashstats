@@ -8,7 +8,7 @@ import { Button, Container } from 'react-bootstrap';
 const GlobalData = () => {
   return (
     <>
-      <div className="container bg-gray-900 text-white py-16 px-6 md:px-24">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-6xl font-bold text-yellow-400 mb-10 text-center">Global Data Coverage</h2>
         <div className="max-w-5xl mx-auto space-y-8">
           <Carousel className="custom-carousel" indicators={true} controls={true} interval={5000} pause="hover">
