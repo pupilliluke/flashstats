@@ -45,7 +45,7 @@ const HomePage = () => {
   }, [players.length]);
 
   return (
-    <div className="font-roboto-slab bg-gray-900 text-white min-h-screen w-full overflow-x-hidden">
+    <div className="font-roboto-slab bg-gray-900 text-white min-h-screen w-full flex flex-col">
       {/* Header */}
      <header className="relative bg-cover bg-center h-[65vh] w-full" style={{ backgroundImage: 'url("/bg2.jpg")' }}>
           <div className="absolute top-0 left-0 w-full flex justify-between items-center p-6 text-sm z-10">
@@ -84,7 +84,7 @@ const HomePage = () => {
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Take a look at this video for a brief tour of <span className="text-blue-800">BRAIN</span></h3>
             </div>
             <div className="flex-1">
-              <div className="w-full" style={{ paddingTop: '56.25%', position: 'relative' }}>
+              <div className="md:w-[600px] w-[90vw] mx-auto" style={{ paddingTop: '56.25%', position: 'relative' }}>
                 <iframe
                   src="https://www.youtube.com/embed/AOTAw6Wtv-o?si=yJbBjWokFE8OXX16"
                   title="YouTube video player"
@@ -113,7 +113,7 @@ const HomePage = () => {
             >
               &#8592;
             </button>
-            <div className="w-full max-w-[90%] transition-all duration-300 ease-in-out transform">
+            <div className="w-full max-w-[100%] transition-all duration-300 ease-in-out transform">
               <div className="flex flex-col items-center bg-gray-900 backdrop-blur-md p-4 rounded-2xl shadow-2xl">
                 <img
                   src={players[index].img}
@@ -144,7 +144,7 @@ const HomePage = () => {
           <iframe
             src="https://www.youtube.com/embed/Uhk2b_zTPXI?autoplay=1&controls=0&loop=1&playlist=Uhk2b_zTPXI"
             title="YouTube video player"
-            style={{ width: '100%', maxWidth: '600px', height: '350px', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
+            style={{ width: '100%', maxWidth: '90%', height: '80vh', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
@@ -182,3 +182,5 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+

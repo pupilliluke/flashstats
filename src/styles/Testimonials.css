@@ -127,24 +127,17 @@
 }
 
 @media (max-width: 768px) {
-  .testimonials-container {
-    padding: 1rem;
-  }
-
   .testimonial-card {
-    padding: 1rem;
-    width: 100%;
+    padding: 1.5rem;
+    min-height: 180px;
+    width: 90%; /* Slightly wider on mobile */
   }
-
+  
   .testimonial-quote {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
-
-  .testimonial-name {
-    font-size: 1rem;
-  }
-
-  .testimonial-title {
-    font-size: 0.85rem;
+  
+  .carousel-indicators {
+    margin-top: 20px;
   }
 }

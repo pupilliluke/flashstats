@@ -10,7 +10,7 @@
     font-family: 'Roboto Slab', serif;
     scroll-behavior: smooth;
     @apply bg-gray-900 text-white;
-    font-size: 14px;
+    box-sizing: border-box;
   }
 
   body {
@@ -19,7 +19,6 @@
 
   h1, h2, h3, h4 {
     @apply font-bold leading-tight text-yellow-400;
-    font-size: 1.5rem;
   }
 
   a {
@@ -29,24 +28,12 @@
   button {
     @apply font-medium rounded-lg px-4 py-2;
   }
+}
 
-  @media (max-width: 768px) {
-    html {
-      font-size: 12px;
-    }
-
-    body {
-      padding: 0 1rem;
-    }
-
-    h1, h2, h3, h4 {
-      font-size: 1.5rem;
-    }
-
-    .section-title {
-      font-size: 1.25rem;
-    }
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /* ===== Component-Level Styles ===== */
