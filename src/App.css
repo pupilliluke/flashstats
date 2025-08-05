@@ -42,3 +42,122 @@ html, body {
     transform: rotate(360deg);
   }
 }
+
+/* Realistic Lightning theme animations inspired by logo */
+@keyframes electric-glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px #3b82f6,
+      0 0 10px #60a5fa,
+      0 0 15px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    text-shadow: 
+      0 0 10px #1e40af,
+      0 0 20px #3b82f6,
+      0 0 30px #60a5fa,
+      0 0 40px rgba(147, 197, 253, 0.4);
+  }
+}
+
+@keyframes electric-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.3);
+  }
+}
+
+@keyframes electric-flash {
+  0%, 95%, 100% {
+    opacity: 0.1;
+  }
+  97% {
+    opacity: 0.9;
+    filter: brightness(2) contrast(1.5);
+  }
+}
+
+@keyframes electric-current {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px rgba(59, 130, 246, 0.3),
+      inset 0 0 5px rgba(59, 130, 246, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 15px rgba(59, 130, 246, 0.6),
+      0 0 25px rgba(96, 165, 250, 0.4),
+      inset 0 0 10px rgba(59, 130, 246, 0.2);
+  }
+}
+
+/* Electric field effect */
+@keyframes electric-field {
+  0%, 100% {
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(59, 130, 246, 0.1) 50%, 
+      transparent 100%);
+  }
+  50% {
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(59, 130, 246, 0.3) 25%,
+      rgba(147, 197, 253, 0.2) 50%,
+      rgba(59, 130, 246, 0.3) 75%,
+      transparent 100%);
+  }
+}
+
+.electric-text {
+  animation: electric-glow 2.5s ease-in-out infinite;
+}
+
+.electric-border {
+  animation: electric-current 3s ease-in-out infinite;
+}
+
+.electric-background {
+  animation: electric-field 4s ease-in-out infinite;
+}
+
+/* Section transitions for cohesive navy blue theme */
+.section-transition {
+  position: relative;
+}
+
+.section-transition::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(59, 130, 246, 0.3) 25%,
+    rgba(96, 165, 250, 0.5) 50%,
+    rgba(59, 130, 246, 0.3) 75%,
+    transparent 100%
+  );
+  opacity: 0.6;
+}
+
+.section-transition::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(59, 130, 246, 0.2) 50%,
+    transparent 100%
+  );
+  opacity: 0.4;
+}

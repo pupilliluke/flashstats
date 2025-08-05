@@ -9,12 +9,12 @@ const GlobalData = () => {
   return (
     <>
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-6xl font-bold text-yellow-400 mb-10 text-center">Global Data Coverage</h2>
+        <h2 className="text-6xl font-bold text-blue-400 mb-10 text-center">Global Data Coverage</h2>
         <div className="max-w-5xl mx-auto space-y-8">
           <Carousel className="custom-carousel" indicators={true} controls={true} interval={5000} pause="hover">
             <Carousel.Item>
-              <section>
-                <h2 className="text-3xl font-bold text-yellow-400 mb-10 text-center">Foreign Leagues</h2>
+              <section className="bg-transparent text-white py-16 px-6 md:px-24 text-center">
+                <h2 className="text-3xl font-bold text-blue-400 mb-10">Foreign Leagues</h2>
                 <div className="space-y-8">
                   <div>
                     <h3 className="text-xl font-semibold text-blue-400">NPB – Nippon Professional Baseball (Japan)</h3>
@@ -37,8 +37,8 @@ const GlobalData = () => {
             </Carousel.Item>
 
             <Carousel.Item>
-            <section className="bg-gray-900 text-white py-16 px-6 md:px-24 text-center">
-                <h2 className="text-3xl font-bold text-yellow-400 mb-10">Collegiate Baseball</h2>
+            <section className="bg-transparent text-white py-16 px-6 md:px-24 text-center">
+                <h2 className="text-3xl font-bold text-blue-400 mb-10">Collegiate Baseball</h2>
                 <div className="max-w-5xl mx-auto space-y-8 text-left">
                 <div>
                     <h3 className="text-xl font-semibold text-blue-400">NCAA (USA)</h3>
@@ -57,8 +57,8 @@ const GlobalData = () => {
             </Carousel.Item>
 
             <Carousel.Item>
-            <section className="bg-gray-900 text-white py-16 px-6 md:px-24 text-center">
-                <h2 className="text-3xl font-bold text-yellow-400 mb-10">High School Baseball</h2>
+            <section className="bg-transparent text-white py-16 px-6 md:px-24 text-center">
+                <h2 className="text-3xl font-bold text-blue-400 mb-10">High School Baseball</h2>
                 <div className="max-w-5xl mx-auto space-y-8 text-left">
                 <div>
                     <h3 className="text-xl font-semibold text-blue-400">Perfect Game Showcase</h3>
@@ -77,8 +77,8 @@ const GlobalData = () => {
             </Carousel.Item>
 
             <Carousel.Item>
-            <section className="bg-gray-900 text-white py-16 px-6 md:px-24 text-center">
-                <h2 className="text-3xl font-bold text-yellow-400 mb-10">Amateur & International Development</h2>
+            <section className="bg-transparent text-white py-16 px-6 md:px-24 text-center">
+                <h2 className="text-3xl font-bold text-blue-400 mb-10">Amateur & International Development</h2>
                 <div className="max-w-5xl mx-auto space-y-8 text-left">
                 <div>
                     <h3 className="text-xl font-semibold text-blue-400">Korean Futures League</h3>

@@ -28,7 +28,7 @@ const HomePage = () => {
   }, [players.length]);
 
   return (
-    <div className="font-roboto-slab bg-gray-900 text-white min-h-screen w-full flex flex-col">
+    <div className="font-roboto-slab bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white min-h-screen w-full flex flex-col">
       {/* Header */}
       <header className="relative bg-cover bg-center h-[65vh] w-full" style={{ backgroundImage: 'url("/bg2.jpg")' }}>
         <div className="absolute top-0 left-0 w-full flex justify-between items-center p-4 sm:p-6 text-sm z-10 max-w-7xl xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
@@ -46,8 +46,9 @@ const HomePage = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center h-full px-4 sm:px-12 md:px-24 bg-gradient-to-t from-black/90 to-black/50">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-yellow-400 drop-shadow-lg uppercase tracking-wide text-center break-words">
-            FlashStats
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-blue-400 drop-shadow-lg uppercase tracking-wide text-center break-words relative">
+            <span className="relative z-10">FlashStats</span>
+            <div className="absolute inset-0 text-blue-500 animate-pulse opacity-50 blur-sm">FlashStats</div>
           </h1>
           <p className="mt-6 text-xl sm:text-2xl md:text-3xl font-medium max-w-4xl text-center">
             The leading provider of advanced baseball data analytics, scouting, and projections for the Majors, collegiate, and amateur league teams.
@@ -56,8 +57,11 @@ const HomePage = () => {
       </header>
 
       <main className="w-full max-w-7xl xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
-        <section className="bg-gray-900 py-16 px-4 sm:px-6 md:px-20 text-center text-white w-full">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Introducing <span className="text-yellow-400">BRAIN</span></h2>
+        <section className="bg-transparent py-16 px-4 sm:px-6 md:px-20 text-center text-white w-full">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Introducing <span className="text-blue-400 relative">
+            <span className="relative z-10">BRAIN</span>
+            <span className="absolute inset-0 text-blue-500 animate-pulse opacity-30 blur-sm">BRAIN</span>
+          </span></h2>
           <p className="text-sm sm:text-base md:text-lg mb-4 max-w-5xl mx-auto">
             <span className="text-md md:text-3xl font-bold">B</span>aseball
             <span className="text-md md:text-3xl font-bold"> R</span>esearch
@@ -70,7 +74,7 @@ const HomePage = () => {
           </p>
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
-              <h3 className="text-xl md:text-2xl font-bold mb-4">Take a brief tour of <span className="text-blue-800">BRAIN</span></h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-4">Take a brief tour of <span className="text-blue-400">BRAIN</span></h3>
             </div>
             <div className="flex-1">
               <div className="w-full aspect-video mx-auto rounded-xl overflow-hidden">
@@ -87,21 +91,24 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-gray-800 text-white py-16 px-4 md:px-20 text-center w-full">
+        <section className="bg-transparent text-white py-16 px-4 md:px-20 text-center w-full">
           <GlobalData />
         </section>
 
-        <section className="bg-gray-900 py-24 px-4 sm:px-8 md:px-20 text-white text-center w-full">
-          <h2 className="text-4xl md:text-6xl font-bold text-yellow-400 mb-12 tracking-wide">Data Analytics</h2>
+        <section className="bg-transparent py-24 px-4 sm:px-8 md:px-20 text-white text-center w-full">
+          <h2 className="text-4xl md:text-6xl font-bold text-blue-400 mb-12 tracking-wide relative">
+            <span className="relative z-10">Data Analytics</span>
+            <div className="absolute inset-0 text-blue-500 animate-pulse opacity-40 blur-sm">Data Analytics</div>
+          </h2>
           <div className="relative flex justify-center items-center">
             <button
               onClick={() => setIndex((prev) => (prev - 1 + players.length) % players.length)}
-              className="absolute left-0 ml-4 bg-gray-700 hover:bg-yellow-500 text-white px-4 py-2 rounded-full shadow-lg transition duration-200"
+              className="absolute left-0 ml-4 bg-gray-700 hover:bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg transition duration-200 hover:shadow-blue-400/50"
             >
               &#8592;
             </button>
             <div className="w-full max-w-4xl transition-all duration-300 ease-in-out transform">
-              <div className="flex flex-col items-center bg-gray-900 backdrop-blur-md p-4 rounded-2xl shadow-2xl">
+              <div className="flex flex-col items-center bg-transparent backdrop-blur-md p-4 rounded-2xl">
                 <img
                   src={players[index].img}
                   alt={players[index].name}
@@ -114,37 +121,46 @@ const HomePage = () => {
             </div>
             <button
               onClick={() => setIndex((prev) => (prev + 1) % players.length)}
-              className="absolute right-0 mr-4 bg-gray-700 hover:bg-yellow-500 text-white px-4 py-2 rounded-full shadow-lg transition duration-200"
+              className="absolute right-0 mr-4 bg-gray-700 hover:bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg transition duration-200 hover:shadow-blue-400/50"
             >
               &#8594;
             </button>
           </div>
         </section>
 
-        <section className="bg-gray-700 py-20 px-4 sm:px-8 md:px-20 text-white w-full">
+        <section className="bg-transparent py-20 px-4 sm:px-8 md:px-20 text-white w-full">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold text-yellow-400 mb-4 tracking-wide">Leadership Message</h2>
-              <div className="w-24 h-1 bg-yellow-400 mx-auto mb-8"></div>
+              <h2 className="text-3xl md:text-5xl font-bold text-blue-400 mb-4 tracking-wide relative">
+                <span className="relative z-10">Leadership Message</span>
+                <div className="absolute inset-0 text-blue-500 animate-pulse opacity-30 blur-sm">Leadership Message</div>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-500 mx-auto mb-8 shadow-lg shadow-blue-400/50"></div>
             </div>
             
-            <div className="bg-gray-800 rounded-2xl p-8 md:p-12 shadow-2xl border-l-4 border-yellow-400">
+            <div className="bg-transparent rounded-2xl p-8 md:p-12 border-l-4 border-blue-400 relative overflow-hidden">
+              <div className="absolute top-4 right-4 w-16 h-16 opacity-10 pointer-events-none">
+                <img src="/logo.png" alt="" className="w-full h-full object-contain" />
+              </div>
               <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-2">Brian Cartwright</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-blue-400 mb-2 relative">
+                  <span className="relative z-10">Brian Cartwright</span>
+                  <div className="absolute inset-0 text-blue-500 animate-pulse opacity-20 blur-sm">Brian Cartwright</div>
+                </h3>
                 <p className="text-lg text-gray-300 font-medium">President and Chief Data Scientist</p>
               </div>
               
               <div className="prose prose-lg max-w-none text-gray-100 leading-relaxed space-y-6">
-                <p className="text-lg md:text-xl font-medium text-yellow-100 italic text-center mb-8">
+                <p className="text-lg md:text-xl font-medium text-blue-100 italic text-center mb-8">
                   "Hello. I am Brian Cartwright, the Chief Data Scientist and President of FlashStats."
                 </p>
                 
                 <p>
-                  For the last ten years, I have been the developer of the <strong className="text-yellow-400">Oliver Projections™</strong>, as featured on The Hardball Times and FanGraphs baseball websites. That experience was the springboard for an opportunity to further the value of my company as a consultant and data provider to the majority of teams in Major League Baseball over the last fifteen years. Recently, the data furnished to MLB teams has grown to include performance data for amateur players, an integral part of their draft preparation.
+                  For the last ten years, I have been the developer of the <strong className="text-blue-400">Oliver Projections™</strong>, as featured on The Hardball Times and FanGraphs baseball websites. That experience was the springboard for an opportunity to further the value of my company as a consultant and data provider to the majority of teams in Major League Baseball over the last fifteen years. Recently, the data furnished to MLB teams has grown to include performance data for amateur players, an integral part of their draft preparation.
                 </p>
                 
                 <p>
-                  Possessing this massive database of high school, summer ball, college data, and scouting info, the company has now decided to expand its service offerings by adding web development and business management professionals through the creation of <strong className="text-yellow-400">FlashStats</strong>. This new company will enable you and your staff access to the same knowledge base and to assist in your role as a college coach and recruiter.
+                  Possessing this massive database of high school, summer ball, college data, and scouting info, the company has now decided to expand its service offerings by adding web development and business management professionals through the creation of <strong className="text-blue-400">FlashStats</strong>. This new company will enable you and your staff access to the same knowledge base and to assist in your role as a college coach and recruiter.
                 </p>
                 
                 <p>
@@ -152,7 +168,7 @@ const HomePage = () => {
                 </p>
                 
                 <p>
-                  Not only does FlashStats offer all the publicly available statistical and scouting information for amateur players, we also leverage our expertise in state of the art baseball analysis to produce <strong className="text-yellow-400">objective evaluations</strong> of players that account for level of competition, ballparks, and a player's age. This allows you to rank the players that most interest you, whether they come from high school, junior college, or the top levels of the NCAA.
+                  Not only does FlashStats offer all the publicly available statistical and scouting information for amateur players, we also leverage our expertise in state of the art baseball analysis to produce <strong className="text-blue-400">objective evaluations</strong> of players that account for level of competition, ballparks, and a player's age. This allows you to rank the players that most interest you, whether they come from high school, junior college, or the top levels of the NCAA.
                 </p>
                 
                 <p>
@@ -163,20 +179,20 @@ const HomePage = () => {
                   We have the stats, we have the scouting reports, and we have the experience and expertise to mold all of this into player evaluations for you. What we will not do is bury you in a maze of numbers. Our commitment is to deliver this information as a scout would. For example, if you want to see bar charts illustrating (from 20 to 80) each batter's plate discipline, contact, hitting for power, hitting for average, speed and arm, we have it!—and we're open to customization for your team while catering to your game schedule.
                 </p>
                 
-                <p className="text-center text-lg font-semibold text-yellow-400 py-4">
+                <p className="text-center text-lg font-semibold text-blue-400 py-4 relative border-t border-b border-blue-400/30 bg-gradient-to-r from-transparent via-blue-900/20 to-transparent">
                   We are here to help you build you a better team...and to do so more easily.
                 </p>
                 
                 <div className="border-t border-gray-600 pt-6 mt-8">
                   <p className="mb-4">
-                    If any of our services interest you, please contact our Director of Business Development, <strong className="text-yellow-400">Richard Vickroy</strong>, at <a href="tel:412-573-0100" className="text-yellow-400 hover:text-yellow-300 transition-colors">412.573.0100</a> or <a href="mailto:Richard.Vickroy@Flash-Stats.com" className="text-yellow-400 hover:text-yellow-300 transition-colors">Richard.Vickroy@Flash-Stats.com</a>
+                    If any of our services interest you, please contact our Director of Business Development, <strong className="text-blue-400">Richard Vickroy</strong>, at <a href="tel:412-573-0100" className="text-blue-400 hover:text-blue-300 transition-colors hover:drop-shadow-sm">412.573.0100</a> or <a href="mailto:Richard.Vickroy@Flash-Stats.com" className="text-blue-400 hover:text-blue-300 transition-colors hover:drop-shadow-sm">Richard.Vickroy@Flash-Stats.com</a>
                   </p>
                   
                   <div className="text-right">
                     <p className="font-semibold">Sincerely,</p>
                     <div className="mt-4 space-y-1 flex flex-col items-end">
                       <img src="/sig.png" alt="Brian Cartwright Signature" className="h-12 mb-2 opacity-90 bg-gray-100 px-3 py-1 rounded" />
-                      <p className="text-xl font-bold text-yellow-400">Brian Cartwright</p>
+                      <p className="text-xl font-bold text-blue-400">Brian Cartwright</p>
                       <p className="text-gray-300">President and Chief Data Scientist</p>
                       <p className="text-gray-300 font-semibold">FlashStats, Inc.</p>
                     </div>
@@ -187,10 +203,19 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-gray-800 py-16 px-4 sm:px-8 md:px-20 text-center text-white w-full">
-          <h2 className="text-2xl md:text-4xl font-bold text-yellow-400 mb-6 tracking-wide">Coming Soon</h2>
+        <section className="bg-transparent py-16 px-4 sm:px-8 md:px-20 text-center text-white w-full">
+          <h2 className="text-2xl md:text-4xl font-bold text-blue-400 mb-6 tracking-wide relative">
+            <span className="relative z-10">Coming Soon</span>
+            <div className="absolute inset-0 text-blue-500 animate-pulse opacity-30 blur-sm">Coming Soon</div>
+            <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-8 h-8 opacity-30">
+              <img src="/logo.png" alt="" className="w-full h-full object-contain" />
+            </div>
+          </h2>
           <p className="text-sm md:text-lg font-medium mb-6 max-w-3xl mx-auto">
-            Introducing <span className="text-yellow-400">OliverProjections</span>, a cutting-edge platform for global data analytics, empowering users with insights from leagues worldwide.
+            Introducing <span className="text-blue-400 relative">
+              <span className="relative z-10">OliverProjections</span>
+              <span className="absolute inset-0 text-blue-500 animate-pulse opacity-20 blur-sm">OliverProjections</span>
+            </span>, a cutting-edge platform for global data analytics, empowering users with insights from leagues worldwide.
           </p>
           <div className="relative w-full max-w-4xl aspect-video mx-auto rounded-xl overflow-hidden shadow-xl">
             <iframe
@@ -209,7 +234,7 @@ const HomePage = () => {
         </div>
       </main>
 
-      <footer className="bg-gray-100 text-gray-800 py-10 px-4 md:px-16 text-center w-full">
+      <footer className="bg-gradient-to-t from-slate-200 via-blue-50 to-gray-100 text-slate-800 py-10 px-4 md:px-16 text-center w-full border-t border-blue-200/50">
         <div className="max-w-6xl xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto flex flex-col items-center gap-4">
           <img src="/logo.png" alt="FlashStats Logo" className="w-16 h-16" />
           <div className="flex gap-6 items-center text-sm">
