@@ -1,0 +1,4 @@
+      {/* Persistent Lightning Background */}
+      <div className="lightning-persistent"></div>
+      
+      {/* Header - Fluent Design Spacing */}

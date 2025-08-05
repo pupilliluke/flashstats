@@ -1,3 +1,14 @@
+@import url('https://fonts.cdnfonts.com/css/sf-transrobotics-2');
+
+@keyframes darkScreenFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .App {
   text-align: center;
 }
@@ -124,6 +135,281 @@ html, body {
 .electric-background {
   animation: electric-field 4s ease-in-out infinite;
 }
+
+/* New Lightning Animation - Black to Light to Strike */
+.lightning-overlay {
+  background: rgba(0, 0, 0, 1);
+  animation: lightning-intro-sequence 5s ease-out forwards;
+}
+
+.lightning-persistent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.08;
+  background: 
+    /* Main lightning bolt from logo to center */
+    linear-gradient(135deg, transparent 0%, transparent 5%, rgba(147, 197, 253, 0.8) 6%, transparent 7%, transparent 15%, rgba(96, 165, 250, 0.6) 16%, transparent 17%, transparent 25%, rgba(59, 130, 246, 0.7) 26%, transparent 27%, transparent 35%, rgba(147, 197, 253, 0.5) 36%, transparent 37%, transparent 45%, rgba(96, 165, 250, 0.8) 46%, transparent 47%, transparent 100%),
+    /* Branch 1 - upper */
+    linear-gradient(120deg, transparent 0%, transparent 20%, rgba(147, 197, 253, 0.4) 21%, transparent 22%, transparent 30%, rgba(96, 165, 250, 0.3) 31%, transparent 32%, transparent 100%),
+    /* Branch 2 - middle */
+    linear-gradient(150deg, transparent 0%, transparent 30%, rgba(59, 130, 246, 0.5) 31%, transparent 32%, transparent 40%, rgba(147, 197, 253, 0.4) 41%, transparent 42%, transparent 100%),
+    /* Branch 3 - lower */
+    linear-gradient(165deg, transparent 0%, transparent 50%, rgba(96, 165, 250, 0.6) 51%, transparent 52%, transparent 60%, rgba(59, 130, 246, 0.4) 61%, transparent 62%, transparent 100%),
+    /* Secondary branches */
+    linear-gradient(110deg, transparent 0%, transparent 15%, rgba(147, 197, 253, 0.3) 16%, transparent 17%, transparent 100%),
+    linear-gradient(140deg, transparent 0%, transparent 25%, rgba(96, 165, 250, 0.3) 26%, transparent 27%, transparent 100%),
+    /* Glow effects */
+    radial-gradient(ellipse at 5% 8%, rgba(147, 197, 253, 0.3) 0%, transparent 30%),
+    radial-gradient(ellipse at 50% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 40%);
+}
+
+@keyframes lightning-intro-sequence {
+  /* Start completely black - darker and longer */
+  0% {
+    background: rgba(0, 0, 0, 1);
+    opacity: 1;
+  }
+  /* Stay darker longer - slowly lighten over 2.4 seconds (48% of 5s) */
+  48% {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+  }
+  /* Brief pause before strike */
+  50% {
+    background: 
+      radial-gradient(ellipse at 15% 15%, rgba(147, 197, 253, 0.05) 0%, transparent 30%),
+      rgba(0, 0, 0, 0.4);
+    opacity: 1;
+  }
+  /* MASSIVE lightning strike at 1.2s mark */
+  52% {
+    background: 
+      /* Intense main bolt */
+      linear-gradient(135deg, transparent 0%, transparent 4%, rgba(255, 255, 255, 1) 5%, rgba(147, 197, 253, 1) 6%, rgba(255, 255, 255, 0.9) 7%, transparent 8%, transparent 14%, rgba(255, 255, 255, 0.8) 15%, rgba(96, 165, 250, 1) 16%, rgba(255, 255, 255, 0.7) 17%, transparent 18%, transparent 24%, rgba(255, 255, 255, 1) 25%, rgba(59, 130, 246, 1) 26%, rgba(255, 255, 255, 0.9) 27%, transparent 28%, transparent 34%, rgba(255, 255, 255, 0.8) 35%, rgba(147, 197, 253, 1) 36%, rgba(255, 255, 255, 0.7) 37%, transparent 38%, transparent 44%, rgba(255, 255, 255, 1) 45%, rgba(96, 165, 250, 1) 46%, rgba(255, 255, 255, 0.9) 47%, transparent 48%, transparent 100%),
+      /* Intense branches */
+      linear-gradient(120deg, transparent 0%, transparent 19%, rgba(255, 255, 255, 0.9) 20%, rgba(147, 197, 253, 1) 21%, rgba(255, 255, 255, 0.8) 22%, transparent 23%, transparent 29%, rgba(255, 255, 255, 0.7) 30%, rgba(96, 165, 250, 1) 31%, rgba(255, 255, 255, 0.6) 32%, transparent 33%, transparent 100%),
+      linear-gradient(150deg, transparent 0%, transparent 29%, rgba(255, 255, 255, 1) 30%, rgba(59, 130, 246, 1) 31%, rgba(255, 255, 255, 0.9) 32%, transparent 33%, transparent 39%, rgba(255, 255, 255, 0.8) 40%, rgba(147, 197, 253, 1) 41%, rgba(255, 255, 255, 0.7) 42%, transparent 43%, transparent 100%),
+      linear-gradient(165deg, transparent 0%, transparent 49%, rgba(255, 255, 255, 1) 50%, rgba(96, 165, 250, 1) 51%, rgba(255, 255, 255, 0.9) 52%, transparent 53%, transparent 59%, rgba(255, 255, 255, 0.8) 60%, rgba(59, 130, 246, 1) 61%, rgba(255, 255, 255, 0.7) 62%, transparent 63%, transparent 100%),
+      /* Massive glow */
+      radial-gradient(ellipse at 15% 15%, rgba(255, 255, 255, 0.9) 0%, rgba(147, 197, 253, 0.8) 20%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.7) 0%, rgba(59, 130, 246, 0.6) 30%, transparent 70%),
+      /* Full screen flash */
+      rgba(147, 197, 253, 0.3);
+    opacity: 1;
+    filter: brightness(2) contrast(1.3);
+  }
+  /* Flash sustain */
+  54% {
+    background: 
+      linear-gradient(135deg, transparent 0%, transparent 5%, rgba(147, 197, 253, 1) 6%, transparent 7%, transparent 15%, rgba(96, 165, 250, 0.9) 16%, transparent 17%, transparent 25%, rgba(59, 130, 246, 1) 26%, transparent 27%, transparent 35%, rgba(147, 197, 253, 0.8) 36%, transparent 37%, transparent 45%, rgba(96, 165, 250, 1) 46%, transparent 47%, transparent 100%),
+      linear-gradient(120deg, transparent 0%, transparent 20%, rgba(147, 197, 253, 0.8) 21%, transparent 22%, transparent 30%, rgba(96, 165, 250, 0.7) 31%, transparent 32%, transparent 100%),
+      linear-gradient(150deg, transparent 0%, transparent 30%, rgba(59, 130, 246, 0.9) 31%, transparent 32%, transparent 40%, rgba(147, 197, 253, 0.8) 41%, transparent 42%, transparent 100%),
+      linear-gradient(165deg, transparent 0%, transparent 50%, rgba(96, 165, 250, 1) 51%, transparent 52%, transparent 60%, rgba(59, 130, 246, 0.8) 61%, transparent 62%, transparent 100%),
+      radial-gradient(ellipse at 15% 15%, rgba(147, 197, 253, 0.7) 0%, transparent 40%),
+      radial-gradient(ellipse at 50% 50%, rgba(59, 130, 246, 0.5) 0%, transparent 60%),
+      rgba(59, 130, 246, 0.1);
+    opacity: 1;
+    filter: brightness(1.5) contrast(1.1);
+  }
+  /* Fade to persistent */
+  70% {
+    background: 
+      linear-gradient(135deg, transparent 0%, transparent 5%, rgba(147, 197, 253, 0.4) 6%, transparent 7%, transparent 15%, rgba(96, 165, 250, 0.3) 16%, transparent 17%, transparent 25%, rgba(59, 130, 246, 0.4) 26%, transparent 27%, transparent 35%, rgba(147, 197, 253, 0.3) 36%, transparent 37%, transparent 45%, rgba(96, 165, 250, 0.4) 46%, transparent 47%, transparent 100%),
+      linear-gradient(120deg, transparent 0%, transparent 20%, rgba(147, 197, 253, 0.2) 21%, transparent 22%, transparent 30%, rgba(96, 165, 250, 0.2) 31%, transparent 32%, transparent 100%),
+      linear-gradient(150deg, transparent 0%, transparent 30%, rgba(59, 130, 246, 0.3) 31%, transparent 32%, transparent 40%, rgba(147, 197, 253, 0.2) 41%, transparent 42%, transparent 100%),
+      linear-gradient(165deg, transparent 0%, transparent 50%, rgba(96, 165, 250, 0.3) 51%, transparent 52%, transparent 60%, rgba(59, 130, 246, 0.2) 61%, transparent 62%, transparent 100%),
+      radial-gradient(ellipse at 15% 15%, rgba(147, 197, 253, 0.2) 0%, transparent 25%),
+      transparent;
+    opacity: 0.4;
+    filter: brightness(1) contrast(1);
+  }
+  100% {
+    background: transparent;
+    opacity: 0;
+    filter: brightness(1) contrast(1);
+  }
+}
+
+/* Subtle ongoing lightning effects after intro */
+@keyframes subtle-lightning {
+  0%, 95%, 100% {
+    background: transparent;
+  }
+  97% {
+    background: radial-gradient(ellipse at random, rgba(59, 130, 246, 0.1) 0%, transparent 30%);
+  }
+}
+
+/* Lightning streak effects */
+.lightning-streak {
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    rgba(147, 197, 253, 0.9) 0%,
+    rgba(59, 130, 246, 0.8) 50%,
+    rgba(30, 64, 175, 0.6) 100%);
+  opacity: 0;
+  animation: lightning-streak 0.3s ease-out;
+}
+
+@keyframes lightning-streak {
+  0% {
+    opacity: 0;
+    height: 0;
+    filter: blur(1px);
+  }
+  10% {
+    opacity: 1;
+    height: 200px;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    height: 400px;
+    filter: blur(2px);
+  }
+}
+
+/* Lightning-Style Typography for entire FlashStats */
+.lightning-letter {
+  position: relative;
+  display: inline-block;
+  color: #f59e0b; /* Orange-yellow like logo */
+  font-family: 'SF TransRobotics', 'Impact', 'Arial Black', sans-serif;
+  font-weight: 900;
+  font-size: 1.45em;
+  vertical-align: -0.1em;
+}
+
+.lightning-letter::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: 
+    linear-gradient(45deg, transparent 40%, rgba(245, 158, 11, 0.3) 45%, transparent 50%),
+    linear-gradient(-45deg, transparent 40%, rgba(245, 158, 11, 0.2) 45%, transparent 50%);
+  z-index: -1;
+  opacity: 0;
+  animation: lightning-aura 2s ease-in-out infinite;
+}
+
+.lightning-letter::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, transparent 48%, rgba(147, 197, 253, 0.4) 49%, transparent 51%),
+    linear-gradient(225deg, transparent 48%, rgba(96, 165, 250, 0.3) 49%, transparent 51%);
+  z-index: -1;
+  opacity: 0;
+  animation: lightning-crack 4s ease-in-out infinite;
+}
+
+/* Simple Lightning-Style Font for F and S */
+.lightning-f {
+  position: relative;
+  font-family: 'SF TransRobotics', 'Impact', 'Arial Black', sans-serif;
+  font-stretch: condensed;
+  letter-spacing: -2px;
+  transform: skew(-8deg, 0deg) scaleY(1.1);
+  filter: drop-shadow(2px 0px 0px rgba(0, 0, 0, 0.8)) drop-shadow(-1px 0px 0px rgba(245, 158, 11, 0.3));
+}
+
+.lightning-f::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  right: 1px;
+  bottom: 2px;
+  background: linear-gradient(45deg, transparent 45%, rgba(245, 158, 11, 0.4) 47%, transparent 49%);
+  z-index: -1;
+}
+
+.lightning-s {
+  position: relative;
+  font-family: 'SF TransRobotics', 'Impact', 'Arial Black', sans-serif;
+  font-stretch: condensed;
+  letter-spacing: -2px;
+  transform: skew(-8deg, 0deg) scaleY(1.1);
+  filter: drop-shadow(2px 0px 0px rgba(0, 0, 0, 0.8)) drop-shadow(-1px 0px 0px rgba(245, 158, 11, 0.3));
+}
+
+.lightning-s::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  right: 1px;
+  bottom: 2px;
+  background: linear-gradient(-45deg, transparent 45%, rgba(245, 158, 11, 0.4) 47%, transparent 49%);
+  z-index: -1;
+}
+
+@keyframes lightning-flicker {
+  0%, 96%, 100% {
+    opacity: 1;
+    text-shadow: 
+      0 0 8px rgba(245, 158, 11, 0.9),
+      0 0 16px rgba(245, 158, 11, 0.7),
+      0 0 24px rgba(245, 158, 11, 0.5),
+      1px 1px 0px rgba(0, 0, 0, 0.9),
+      -1px -1px 0px rgba(245, 158, 11, 0.3);
+  }
+  98% {
+    opacity: 0.8;
+    text-shadow: 
+      0 0 16px rgba(245, 158, 11, 1),
+      0 0 32px rgba(245, 158, 11, 0.9),
+      0 0 48px rgba(245, 158, 11, 0.7),
+      2px 2px 0px rgba(0, 0, 0, 1),
+      -2px -2px 0px rgba(245, 158, 11, 0.5);
+  }
+}
+
+@keyframes lightning-aura {
+  0%, 90%, 100% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes lightning-crack {
+  0%, 85%, 100% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.8;
+  }
+}
+
+/* Microsoft Fluent Design inspired spacing utilities */
+.fluent-spacing-xs { margin: 4px; }
+.fluent-spacing-s { margin: 8px; }
+.fluent-spacing-m { margin: 16px; }
+.fluent-spacing-l { margin: 24px; }
+.fluent-spacing-xl { margin: 32px; }
+.fluent-spacing-xxl { margin: 48px; }
+
+.fluent-padding-xs { padding: 4px; }
+.fluent-padding-s { padding: 8px; }
+.fluent-padding-m { padding: 16px; }
+.fluent-padding-l { padding: 24px; }
+.fluent-padding-xl { padding: 32px; }
+.fluent-padding-xxl { padding: 48px; }
 
 /* Section transitions for cohesive navy blue theme */
 .section-transition {
