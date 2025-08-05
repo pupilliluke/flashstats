@@ -121,6 +121,72 @@ const HomePage = () => {
           </div>
         </section>
 
+        <section className="bg-gray-700 py-20 px-4 sm:px-8 md:px-20 text-white w-full">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold text-yellow-400 mb-4 tracking-wide">Leadership Message</h2>
+              <div className="w-24 h-1 bg-yellow-400 mx-auto mb-8"></div>
+            </div>
+            
+            <div className="bg-gray-800 rounded-2xl p-8 md:p-12 shadow-2xl border-l-4 border-yellow-400">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-2">Brian Cartwright</h3>
+                <p className="text-lg text-gray-300 font-medium">President and Chief Data Scientist</p>
+              </div>
+              
+              <div className="prose prose-lg max-w-none text-gray-100 leading-relaxed space-y-6">
+                <p className="text-lg md:text-xl font-medium text-yellow-100 italic text-center mb-8">
+                  "Hello. I am Brian Cartwright, the Chief Data Scientist and President of FlashStats."
+                </p>
+                
+                <p>
+                  For the last ten years, I have been the developer of the <strong className="text-yellow-400">Oliver Projections™</strong>, as featured on The Hardball Times and FanGraphs baseball websites. That experience was the springboard for an opportunity to further the value of my company as a consultant and data provider to the majority of teams in Major League Baseball over the last fifteen years. Recently, the data furnished to MLB teams has grown to include performance data for amateur players, an integral part of their draft preparation.
+                </p>
+                
+                <p>
+                  Possessing this massive database of high school, summer ball, college data, and scouting info, the company has now decided to expand its service offerings by adding web development and business management professionals through the creation of <strong className="text-yellow-400">FlashStats</strong>. This new company will enable you and your staff access to the same knowledge base and to assist in your role as a college coach and recruiter.
+                </p>
+                
+                <p>
+                  We realize that you may not have all the resources of a major league team to handle the "big data" of baseball, so our goal is to create and continue the development of an interactive website that gives you the tools to <strong>1)</strong> search for the recruits who will most help your team, and <strong>2)</strong> allow you to research your upcoming opponents.
+                </p>
+                
+                <p>
+                  Not only does FlashStats offer all the publicly available statistical and scouting information for amateur players, we also leverage our expertise in state of the art baseball analysis to produce <strong className="text-yellow-400">objective evaluations</strong> of players that account for level of competition, ballparks, and a player's age. This allows you to rank the players that most interest you, whether they come from high school, junior college, or the top levels of the NCAA.
+                </p>
+                
+                <p>
+                  When planning for your upcoming opponents, FlashStats can provide the insights that will give your team the edge, from <strong>spray charts and batter/pitcher matchups</strong>, to <strong>defensive and baserunning evaluations</strong>.
+                </p>
+                
+                <p>
+                  We have the stats, we have the scouting reports, and we have the experience and expertise to mold all of this into player evaluations for you. What we will not do is bury you in a maze of numbers. Our commitment is to deliver this information as a scout would. For example, if you want to see bar charts illustrating (from 20 to 80) each batter's plate discipline, contact, hitting for power, hitting for average, speed and arm, we have it!—and we're open to customization for your team while catering to your game schedule.
+                </p>
+                
+                <p className="text-center text-lg font-semibold text-yellow-400 py-4">
+                  We are here to help you build you a better team...and to do so more easily.
+                </p>
+                
+                <div className="border-t border-gray-600 pt-6 mt-8">
+                  <p className="mb-4">
+                    If any of our services interest you, please contact our Director of Business Development, <strong className="text-yellow-400">Richard Vickroy</strong>, at <a href="tel:412-573-0100" className="text-yellow-400 hover:text-yellow-300 transition-colors">412.573.0100</a> or <a href="mailto:Richard.Vickroy@Flash-Stats.com" className="text-yellow-400 hover:text-yellow-300 transition-colors">Richard.Vickroy@Flash-Stats.com</a>
+                  </p>
+                  
+                  <div className="text-right">
+                    <p className="font-semibold">Sincerely,</p>
+                    <div className="mt-4 space-y-1 flex flex-col items-end">
+                      <img src="/sig.png" alt="Brian Cartwright Signature" className="h-12 mb-2 opacity-90 bg-gray-100 px-3 py-1 rounded" />
+                      <p className="text-xl font-bold text-yellow-400">Brian Cartwright</p>
+                      <p className="text-gray-300">President and Chief Data Scientist</p>
+                      <p className="text-gray-300 font-semibold">FlashStats, Inc.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-gray-800 py-16 px-4 sm:px-8 md:px-20 text-center text-white w-full">
           <h2 className="text-2xl md:text-4xl font-bold text-yellow-400 mb-6 tracking-wide">Coming Soon</h2>
           <p className="text-sm md:text-lg font-medium mb-6 max-w-3xl mx-auto">
