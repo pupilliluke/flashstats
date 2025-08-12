@@ -1,0 +1,12 @@
+/* Flash Logo Styling - Fallback without custom font for now */
+.flash-logo {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: linear-gradient(45deg, #ffd700, #ff8c00, #ff6b35);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(255, 140, 0, 0.3);
+}

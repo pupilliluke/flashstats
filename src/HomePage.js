@@ -3,6 +3,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { Mail, Phone } from "lucide-react";
 import Testimonials from './Testimonials';
 import GlobalData from './GlobalData';
+import './fonts.css';
 
 const HomePage = () => {
   const players = [
@@ -68,7 +69,7 @@ const HomePage = () => {
       </video>
       
       {/* Header - Fluent Design Spacing */}
-      <header className="relative bg-cover bg-center h-[65vh] w-full overflow-hidden" style={{ backgroundImage: 'url("/bg2.jpg")' }}>
+      <header className="relative bg-cover bg-center h-[65vh] w-full overflow-hidden" style={{ backgroundImage: 'url("/1.webp")' }}>
         {/* Dark overlay - positioned absolutely to cover only the header */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50"></div>
         
@@ -78,24 +79,20 @@ const HomePage = () => {
             <div className="flex flex-col items-end text-right" style={{ gap: '4px' }}>
               <span className="flex items-center justify-end" style={{ gap: '4px' }}>
                 <Mail className="w-4 h-4" />
-                <span className="hidden md:inline">info@Flash-Stats.com</span>
+                <span>info@Flash-Stats.com</span>
               </span>
               <span className="flex items-center justify-end" style={{ gap: '4px' }}>
                 <Phone className="w-4 h-4" />
-                <span className="hidden md:inline">800-842-5769</span>
+                <span>800-842-5769</span>
               </span>
             </div>
           </div>
         </div>
 
         <div className="relative flex flex-col justify-center items-center h-full z-10" style={{ padding: '32px' }}>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-blue-400 drop-shadow-lg uppercase tracking-wide text-center break-words relative">
-            <span className="relative z-10">
-<span className="lightning-letter">F</span><span style={{fontFamily: "'SF TransRobotics', 'Impact', 'Arial Black', sans-serif"}}>lash</span><img src="/bolt.png" alt="S" className="inline-block h-[1.6em] w-auto" style={{verticalAlign: '-30%'}} /><span style={{fontFamily: "'SF TransRobotics', 'Impact', 'Arial Black', sans-serif"}}>tats</span>
-            </span>
-          </h1>
-          <p className="font-medium max-w-4xl text-center text-xl sm:text-2xl md:text-3xl" style={{ marginTop: '24px' }}>
-            The leading provider of advanced baseball data analytics, scouting, and projections for the Majors, collegiate, and amateur league teams.
+          <img src="/FlashStats.png" alt="FlashStats Logo" className="max-w-full h-auto" style={{ width: '26%' }} />
+          <p className="font-medium max-w-4xl text-center text-xl sm:text-2xl md:text-3xl relative z-20 text-white drop-shadow-lg" style={{ marginTop: '24px', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+            The leading provider of advanced baseball analytics, scouting, and projections for the majors, collegiate, and amateur leagues.
           </p>
         </div>
       </header>
