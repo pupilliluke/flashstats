@@ -90,7 +90,7 @@ const HomePage = () => {
         </div>
 
         <div className="relative flex flex-col justify-center items-center h-full z-10" style={{ padding: '32px' }}>
-          <img src="/FlashStats.png" alt="FlashStats Logo" className="max-w-full h-auto" style={{ width: '26%' }} />
+          <img src="/FlashStats.png" alt="FlashStats Logo" className="max-w-full h-auto w-3/5 sm:w-2/5 md:w-1/4" />
           <p className="font-medium max-w-4xl text-center text-xl sm:text-2xl md:text-3xl relative z-20 text-white drop-shadow-lg" style={{ marginTop: '24px', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
             The leading provider of advanced baseball analytics, scouting, and projections for the majors, collegiate, and amateur leagues.
           </p>
