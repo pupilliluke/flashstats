@@ -5,7 +5,8 @@
       "Bash(npm run build:*)",
       "Bash(cmd /c:*)",
       "Bash(powershell:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(npm install:*)"
     ],
     "deny": []
   }
